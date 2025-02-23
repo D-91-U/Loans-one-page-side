@@ -7,6 +7,10 @@
   --primary-text-color: grey;
   --secondary-text-color: red;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   background-image: url(/assets/hex-background.jpg);
   background-size: cover;
@@ -55,7 +59,7 @@ li {
   border-bottom: 1px solid var(--secondary-text-color);
 }
 .header-list a:active {
-    color: var(--secondary-text-color);
+  color: var(--secondary-text-color);
 }
 .main {
   margin: auto;
@@ -67,10 +71,11 @@ li {
 .main-container {
   display: flex;
   justify-content: space-between;
-  min-width: 1100px;
-  min-height: 600px;
+  width: 100%;
+  max-width: 1100px;
 }
 .main-info-left {
+  margin: auto;
   width: 500px;
   height: 550px;
   border-right: 1px solid var(--secondary-text-color); /*red arch left*/
@@ -97,7 +102,6 @@ li {
   justify-content: space-between;
   padding: 10px 120px 10px 60px;
   opacity: 0.6;
-  margin-right: 10px;
 }
 .main-icons {
   width: 50px;
@@ -124,12 +128,14 @@ li {
   color: var(--primary-text-color);
 }
 .main-form-right {
+  margin: 5px auto;
   width: 500px;
   height: 550px;
   border-left: 1px solid var(--secondary-text-color); /*red arch right*/
   border-radius: 50%;
 }
 .main-form-right-text {
+  text-align: center;
   padding: 30px 0 0 30px;
   font-size: 2rem;
   font-weight: 700;
@@ -144,6 +150,7 @@ li {
   align-items: center;
   height: 400px;
   padding: 70px 0 0 20px;
+  margin-left: 20px;
 }
 .main-form-group {
   display: flex;
